@@ -8,6 +8,6 @@ import ar.com.ada.api.creditos.entities.Cliente;
 @Repository
 public interface ClienteRepository extends JpaRepository <Cliente, Integer> {
 
-
+    Cliente findByClienteId(Integer id);
     
 }

@@ -2,7 +2,6 @@ package ar.com.ada.api.creditos.entities;
 
 import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.*;
 
 import org.hibernate.annotations.NaturalId;
 
@@ -27,7 +26,7 @@ public class Cliente {
     private String direccionAlternativa;
 
     @Column(name = "fecha_nacimiento")
-    @Temporal(TemporalType.DATE) //SOLO Poner esto si no queremos manejar HORA en el DB Server.
+    @Temporal(TemporalType.DATE) 
     private Date fechaNacimiento;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
