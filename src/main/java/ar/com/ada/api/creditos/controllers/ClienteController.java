@@ -23,7 +23,7 @@ public class ClienteController {
      service.createCliente(cliente);
     }
 
-    @PostMapping
+    @PostMapping ("/clientes")
     public ResponseEntity<GenericResponse> crearClienteV2(@RequestBody Cliente cliente){
 
         GenericResponse r = new GenericResponse();

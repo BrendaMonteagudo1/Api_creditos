@@ -15,7 +15,7 @@ public class PrestamoController {
     @Autowired
     PrestamoService service;
 
-    @PostMapping
+    @PostMapping ("/prestamos")
     public ResponseEntity<GenericResponse> emitirPrestamo(@RequestBody PrestamoRequest request){
         GenericResponse r = new GenericResponse();
 
