@@ -1,5 +1,5 @@
 package ar.com.ada.api.creditos.controllers;
-
+import java.util.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,5 +28,19 @@ public class PrestamoController {
         return ResponseEntity.ok(r);
 
 
+    }
+
+    @GetMapping("/prestamos")
+    public ResponseEntity<List<Prestamo>> traerPrestamos() {
+        List<Prestamo> lista = service.traerPrestamos();
+
+        return ResponseEntity.ok(lista);
+    }
+
+    @GetMapping("/prestamo/{id}")
+    public ResponseEntity<Prestamo> getEmpleada(@PathVariable Integer id){
+        Prestamo prestamo = service.buscarPrestamo(id);
+
+        return ResponseEntity.ok(prestamo);
     }
 }
