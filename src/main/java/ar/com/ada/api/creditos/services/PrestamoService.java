@@ -35,27 +35,29 @@ public class PrestamoService {
         
         cliente.agregarPrestamo(prestamo);
 
-        return repo.save(prestamo);
-
-        
-        
+        return repo.save(prestamo);  
     }
 
-    public Prestamo buscarPrestamo(Integer id) {
+    public Prestamo buscarPrestamoPorId(Integer id) {
 
         Optional<Prestamo> resultado = repo.findById(id);
 
         if(resultado.isPresent())
             return resultado.get();
         
-        
-        return null;
-        
+        return null;   
     }
 
     public List<Prestamo> traerPrestamos() {
        return repo.findAll();
-        }
+    }
+
+
+    public void actualizar(Prestamo prestamo) {
+
+      repo.save(prestamo);
+     }
+    
 
    
 }

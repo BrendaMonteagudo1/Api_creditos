@@ -14,19 +14,22 @@ import ar.com.ada.api.creditos.repos.ClienteRepository;
 public class ClienteService {
 
    @Autowired
-    ClienteRepository repository;
+   ClienteRepository repository;
 
-    public List<Cliente> traerTodos(){
-    return repository.findAll();
-    } 
-    
-    
-    public void createCliente(Cliente cliente){
-     repository.save(cliente);
-    } 
+   public List<Cliente> traerTodos() {
+      return repository.findAll();
+   }
 
-    public Cliente buscarPorId(Integer id){
-        return repository.findByClienteId(id);
-     }
-    
+   public void createCliente(Cliente cliente) {
+      repository.save(cliente);
+   }
+
+   public Cliente buscarPorId(Integer id) {
+      return repository.findByClienteId(id);
+   }
+
+   public void actualizar(Cliente cliente) {
+      repository.save(cliente);
+   }
+
 }
