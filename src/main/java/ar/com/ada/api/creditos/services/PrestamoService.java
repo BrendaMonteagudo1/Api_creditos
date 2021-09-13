@@ -13,7 +13,7 @@ import ar.com.ada.api.creditos.entities.Prestamo;
 import ar.com.ada.api.creditos.entities.Prestamo.EstadoPrestamoEnum;
 import ar.com.ada.api.creditos.repos.PrestamoRepository;
 
-
+@Service /// faltaba notacion service
 public class PrestamoService {
     
     @Autowired

@@ -9,6 +9,7 @@ import ar.com.ada.api.creditos.entities.*;
 import ar.com.ada.api.creditos.models.request.InfoCancelacionNueva;
 import ar.com.ada.api.creditos.models.response.GenericResponse;
 import ar.com.ada.api.creditos.services.*;
+import ar.com.ada.api.creditos.services.PrestamoService;
 
 @RestController
 public class CancelacionController {
